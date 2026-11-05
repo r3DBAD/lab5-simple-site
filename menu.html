@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Меню — Кофейня «Зерно»</title><link rel="stylesheet" href="style.css"></head><body>
+<header><a id="logo" href="index.html">Кофейня «Зерно»</a><nav id="nav">
+<a id="nav-home" href="index.html">Главная</a> <a id="nav-menu" href="menu.html">Меню</a> <a id="nav-about" href="about.html">О нас</a> <a id="nav-contacts" href="contacts.html">Контакты</a> <a id="nav-login" href="login.html">Вход</a>
+</nav></header><main>
+<h1>Меню</h1><div class="tools"><button class="flt on" data-cat="all" id="f-all">Все</button><button class="flt" data-cat="coffee" id="f-coffee">Кофе</button><button class="flt" data-cat="tea" id="f-tea">Чай</button><button class="flt" data-cat="dessert" id="f-dessert">Десерты</button>
+<input id="search" placeholder="Поиск по названию"><select id="sort"><option value="">Без сортировки</option><option value="asc">Сначала дешевле</option><option value="desc">Сначала дороже</option></select></div>
+<p id="none" hidden>Ничего не найдено</p><ul id="items"></ul>
+<section id="cart"><h2>Корзина</h2><p id="cart-empty">Корзина пуста</p><ul id="cart-list"></ul><p>Позиций: <b id="cart-count">0</b>, сумма: <b id="cart-total">0</b> ₽</p><button id="cart-clear">Очистить</button></section>
+</main><footer><a id="foot-about" href="about.html">О нас</a> · <a id="foot-contacts" href="contacts.html">Контакты</a><p>Учебный сайт для лабораторной работы по тестированию. Кофейня вымышленная.</p></footer>
+<script src="app.js"></script></body></html>
