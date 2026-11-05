@@ -16,6 +16,10 @@ var page = location.pathname.split("/").pop() || "index.html";
 // вошедшему в меню показываем «Кабинет» вместо «Вход»
 if (currentUser()) { el("nav-login").textContent = "Кабинет"; el("nav-login").href = "account.html"; }
 if (page === "account.html" && !currentUser()) location.replace("login.html");
+// кнопка «назад» может показать кабинет из кэша браузера, тогда код выше не выполняется
+window.addEventListener("pageshow", function () {
+  if (page === "account.html" && !currentUser()) location.replace("login.html");
+});
 if (page === "login.html" && currentUser()) location.replace("account.html");
 
 if (el("login")) {
